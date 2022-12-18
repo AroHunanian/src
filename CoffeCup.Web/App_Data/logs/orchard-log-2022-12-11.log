@@ -1,0 +1,306 @@
+2022-12-11 23:03:45.5200||||Microsoft.Hosting.Lifetime|INFO|Now listening on: https://localhost:5001 
+2022-12-11 23:03:45.5841||||Microsoft.Hosting.Lifetime|INFO|Now listening on: http://localhost:5000 
+2022-12-11 23:03:45.5918||||Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-12-11 23:03:45.5918||||Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2022-12-11 23:03:45.5918||||Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\User\src\CoffeCup.Web\ 
+2022-12-11 23:09:51.6966|Default|00-bcd3dc5013cf07b165e9f5de3417b1c6-16c0a3680afdaaa3-00||OrchardCore.Data.Migration.DataMigrationManager|ERROR|Error while running migration version 0 for 'OrchardCore.Contents'. System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near 'Shop_FK_ContentItemIndex'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean isAsync, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2848
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 581
+   at YesSql.Sql.SchemaBuilder.Execute(IEnumerable`1 statements)
+   at YesSql.Sql.SchemaBuilder.CreateForeignKey(String name, String srcTable, String[] srcColumns, String destTable, String[] destColumns)
+   at YesSql.Sql.SchemaBuilder.CreateMapIndexTable(Type indexType, Action`1 table, String collection)
+   at YesSql.Sql.SchemaBuilderExtensions.CreateMapIndexTable[T](ISchemaBuilder builder, Action`1 table, String collection)
+   at OrchardCore.ContentManagement.Records.Migrations.Create()
+ClientConnectionId:f599d8cf-8277-4f0a-97d7-2c785fe84c5e
+Error Number:102,State:1,Class:15
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at OrchardCore.Data.Migration.DataMigrationManager.UpdateAsync(String featureId)    at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at OrchardCore.Data.Migration.DataMigrationManager.UpdateAsync(String featureId)
+2022-12-11 23:09:51.8059|Default|00-bcd3dc5013cf07b165e9f5de3417b1c6-16c0a3680afdaaa3-00||OrchardCore.Data.Migration.DataMigrationManager|ERROR|Error while running migration version 0 for 'OrchardCore.Alias'. System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near 'Shop_FK_AliasPartIndex'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean isAsync, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2848
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 581
+   at YesSql.Sql.SchemaBuilder.Execute(IEnumerable`1 statements)
+   at YesSql.Sql.SchemaBuilder.CreateForeignKey(String name, String srcTable, String[] srcColumns, String destTable, String[] destColumns)
+   at YesSql.Sql.SchemaBuilder.CreateMapIndexTable(Type indexType, Action`1 table, String collection)
+   at YesSql.Sql.SchemaBuilderExtensions.CreateMapIndexTable[T](ISchemaBuilder builder, Action`1 table, String collection)
+   at OrchardCore.Alias.Migrations.Create()
+ClientConnectionId:f599d8cf-8277-4f0a-97d7-2c785fe84c5e
+Error Number:102,State:1,Class:15
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at OrchardCore.Data.Migration.DataMigrationManager.UpdateAsync(String featureId)    at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at OrchardCore.Data.Migration.DataMigrationManager.UpdateAsync(String featureId)
+2022-12-11 23:09:51.8388|Default|00-bcd3dc5013cf07b165e9f5de3417b1c6-16c0a3680afdaaa3-00||OrchardCore.Data.Migration.DataMigrationManager|ERROR|Error while running migration version 0 for 'OrchardCore.Autoroute'. System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near 'Shop_FK_AutoroutePartIndex'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean isAsync, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2848
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 581
+   at YesSql.Sql.SchemaBuilder.Execute(IEnumerable`1 statements)
+   at YesSql.Sql.SchemaBuilder.CreateForeignKey(String name, String srcTable, String[] srcColumns, String destTable, String[] destColumns)
+   at YesSql.Sql.SchemaBuilder.CreateMapIndexTable(Type indexType, Action`1 table, String collection)
+   at YesSql.Sql.SchemaBuilderExtensions.CreateMapIndexTable[T](ISchemaBuilder builder, Action`1 table, String collection)
+   at OrchardCore.Autoroute.Migrations.Create()
+ClientConnectionId:f599d8cf-8277-4f0a-97d7-2c785fe84c5e
+Error Number:102,State:1,Class:15
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at OrchardCore.Data.Migration.DataMigrationManager.UpdateAsync(String featureId)    at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at OrchardCore.Data.Migration.DataMigrationManager.UpdateAsync(String featureId)
+2022-12-11 23:09:51.8866|Default|00-bcd3dc5013cf07b165e9f5de3417b1c6-16c0a3680afdaaa3-00||OrchardCore.Data.Migration.DataMigrationManager|ERROR|Error while running migration version 0 for 'OrchardCore.Users'. System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near 'Shop_FK_UserIndex'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean isAsync, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2848
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 581
+   at YesSql.Sql.SchemaBuilder.Execute(IEnumerable`1 statements)
+   at YesSql.Sql.SchemaBuilder.CreateForeignKey(String name, String srcTable, String[] srcColumns, String destTable, String[] destColumns)
+   at YesSql.Sql.SchemaBuilder.CreateMapIndexTable(Type indexType, Action`1 table, String collection)
+   at YesSql.Sql.SchemaBuilderExtensions.CreateMapIndexTable[T](ISchemaBuilder builder, Action`1 table, String collection)
+   at OrchardCore.Users.Migrations.Create()
+ClientConnectionId:f599d8cf-8277-4f0a-97d7-2c785fe84c5e
+Error Number:102,State:1,Class:15
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at OrchardCore.Data.Migration.DataMigrationManager.UpdateAsync(String featureId)    at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at OrchardCore.Data.Migration.DataMigrationManager.UpdateAsync(String featureId)
+2022-12-11 23:09:51.9342|Default|00-bcd3dc5013cf07b165e9f5de3417b1c6-16c0a3680afdaaa3-00||OrchardCore.Data.Migration.DataMigrationManager|ERROR|Error while running migration version 0 for 'OrchardCore.Deployment'. System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near 'Shop_FK_DeploymentPlanIndex'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean isAsync, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2848
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 581
+   at YesSql.Sql.SchemaBuilder.Execute(IEnumerable`1 statements)
+   at YesSql.Sql.SchemaBuilder.CreateForeignKey(String name, String srcTable, String[] srcColumns, String destTable, String[] destColumns)
+   at YesSql.Sql.SchemaBuilder.CreateMapIndexTable(Type indexType, Action`1 table, String collection)
+   at YesSql.Sql.SchemaBuilderExtensions.CreateMapIndexTable[T](ISchemaBuilder builder, Action`1 table, String collection)
+   at OrchardCore.Deployment.Migrations.Create()
+ClientConnectionId:f599d8cf-8277-4f0a-97d7-2c785fe84c5e
+Error Number:102,State:1,Class:15
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at OrchardCore.Data.Migration.DataMigrationManager.UpdateAsync(String featureId)    at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at OrchardCore.Data.Migration.DataMigrationManager.UpdateAsync(String featureId)
+2022-12-11 23:09:51.9668|Default|00-bcd3dc5013cf07b165e9f5de3417b1c6-16c0a3680afdaaa3-00||OrchardCore.Data.Migration.DataMigrationManager|ERROR|Error while running migration version 0 for 'OrchardCore.Layers'. System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near 'Shop_FK_LayerMetadataIndex'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean isAsync, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2848
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 581
+   at YesSql.Sql.SchemaBuilder.Execute(IEnumerable`1 statements)
+   at YesSql.Sql.SchemaBuilder.CreateForeignKey(String name, String srcTable, String[] srcColumns, String destTable, String[] destColumns)
+   at YesSql.Sql.SchemaBuilder.CreateMapIndexTable(Type indexType, Action`1 table, String collection)
+   at YesSql.Sql.SchemaBuilderExtensions.CreateMapIndexTable[T](ISchemaBuilder builder, Action`1 table, String collection)
+   at OrchardCore.Layers.Migrations.Create()
+ClientConnectionId:f599d8cf-8277-4f0a-97d7-2c785fe84c5e
+Error Number:102,State:1,Class:15
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at OrchardCore.Data.Migration.DataMigrationManager.UpdateAsync(String featureId)    at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at OrchardCore.Data.Migration.DataMigrationManager.UpdateAsync(String featureId)
+2022-12-11 23:09:51.9832|Default|00-bcd3dc5013cf07b165e9f5de3417b1c6-16c0a3680afdaaa3-00||OrchardCore.Data.Migration.DataMigrationManager|ERROR|Error while running migration version 0 for 'OrchardCore.Lists'. System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near 'Shop_FK_ContainedPartIndex'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean isAsync, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2848
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 581
+   at YesSql.Sql.SchemaBuilder.Execute(IEnumerable`1 statements)
+   at YesSql.Sql.SchemaBuilder.CreateForeignKey(String name, String srcTable, String[] srcColumns, String destTable, String[] destColumns)
+   at YesSql.Sql.SchemaBuilder.CreateMapIndexTable(Type indexType, Action`1 table, String collection)
+   at YesSql.Sql.SchemaBuilderExtensions.CreateMapIndexTable[T](ISchemaBuilder builder, Action`1 table, String collection)
+   at OrchardCore.Lists.Migrations.Create()
+ClientConnectionId:f599d8cf-8277-4f0a-97d7-2c785fe84c5e
+Error Number:102,State:1,Class:15
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at OrchardCore.Data.Migration.DataMigrationManager.UpdateAsync(String featureId)    at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at OrchardCore.Data.Migration.DataMigrationManager.UpdateAsync(String featureId)
+2022-12-11 23:09:52.1932|Default|00-bcd3dc5013cf07b165e9f5de3417b1c6-16c0a3680afdaaa3-00||OrchardCore.Data.Migration.DataMigrationManager|ERROR|Error while running migration version 0 for 'OrchardCore.Taxonomies'. System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near 'Shop_FK_TaxonomyIndex'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean isAsync, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2848
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 581
+   at YesSql.Sql.SchemaBuilder.Execute(IEnumerable`1 statements)
+   at YesSql.Sql.SchemaBuilder.CreateForeignKey(String name, String srcTable, String[] srcColumns, String destTable, String[] destColumns)
+   at YesSql.Sql.SchemaBuilder.CreateMapIndexTable(Type indexType, Action`1 table, String collection)
+   at YesSql.Sql.SchemaBuilderExtensions.CreateMapIndexTable[T](ISchemaBuilder builder, Action`1 table, String collection)
+   at OrchardCore.Taxonomies.Migrations.Create()
+ClientConnectionId:f599d8cf-8277-4f0a-97d7-2c785fe84c5e
+Error Number:102,State:1,Class:15
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at OrchardCore.Data.Migration.DataMigrationManager.UpdateAsync(String featureId)    at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at OrchardCore.Data.Migration.DataMigrationManager.UpdateAsync(String featureId)
+2022-12-11 23:09:53.5649|Default|00-bcd3dc5013cf07b165e9f5de3417b1c6-16c0a3680afdaaa3-00||Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|ERROR|An unhandled exception has occurred while executing the request. Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Coffe Shop_ContentItemIndex'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__208_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 418
+   at YesSql.Store.ProduceAsync[T,TState](WorkerQueryKey key, Func`2 work, TState state)
+   at YesSql.Services.DefaultQuery.Query`1.ListImpl()
+   at YesSql.Services.DefaultQuery.Query`1.ListImpl()
+   at OrchardCore.ContentManagement.DefaultContentManager.ImportAsync(IEnumerable`1 contentItems)
+   at OrchardCore.Recipes.Services.RecipeExecutor.<>c__DisplayClass7_0.<<ExecuteStepAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at OrchardCore.Environment.Shell.Scope.ShellScope.UsingAsync(Func`2 execute, Boolean activateShell)
+   at OrchardCore.Environment.Shell.Scope.ShellScope.UsingAsync(Func`2 execute, Boolean activateShell)
+   at OrchardCore.Environment.Shell.Scope.ShellScope.UsingAsync(Func`2 execute, Boolean activateShell)
+   at OrchardCore.Environment.Shell.Scope.ShellScope.UsingAsync(Func`2 execute, Boolean activateShell)
+   at OrchardCore.Recipes.Services.RecipeExecutor.ExecuteStepAsync(RecipeExecutionContext recipeStep)
+   at OrchardCore.Recipes.Services.RecipeExecutor.ExecuteAsync(String executionId, RecipeDescriptor recipeDescriptor, IDictionary`2 environment, CancellationToken cancellationToken)
+   at OrchardCore.Recipes.Services.RecipeExecutor.ExecuteAsync(String executionId, RecipeDescriptor recipeDescriptor, IDictionary`2 environment, CancellationToken cancellationToken)
+   at OrchardCore.Recipes.Services.RecipeExecutor.ExecuteAsync(String executionId, RecipeDescriptor recipeDescriptor, IDictionary`2 environment, CancellationToken cancellationToken)
+   at OrchardCore.Setup.Services.SetupService.SetupInternalAsync(SetupContext context)
+   at OrchardCore.Setup.Services.SetupService.SetupAsync(SetupContext context)
+   at OrchardCore.Setup.Services.SetupService.SetupAsync(SetupContext context)
+   at OrchardCore.Setup.Controllers.SetupController.IndexPOST(SetupViewModel model)
+   at lambda_method178(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at OrchardCore.Modules.ModularTenantRouterMiddleware.Invoke(HttpContext httpContext)
+   at OrchardCore.Modules.ModularTenantContainerMiddleware.<>c__DisplayClass4_0.<<Invoke>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at OrchardCore.Environment.Shell.Scope.ShellScope.UsingAsync(Func`2 execute, Boolean activateShell)
+   at OrchardCore.Environment.Shell.Scope.ShellScope.UsingAsync(Func`2 execute, Boolean activateShell)
+   at OrchardCore.Environment.Shell.Scope.ShellScope.UsingAsync(Func`2 execute, Boolean activateShell)
+   at OrchardCore.Environment.Shell.Scope.ShellScope.UsingAsync(Func`2 execute, Boolean activateShell)
+   at OrchardCore.Modules.ModularTenantContainerMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+ClientConnectionId:f599d8cf-8277-4f0a-97d7-2c785fe84c5e
+Error Number:208,State:1,Class:16    at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__208_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 418
+   at YesSql.Store.ProduceAsync[T,TState](WorkerQueryKey key, Func`2 work, TState state)
+   at YesSql.Services.DefaultQuery.Query`1.ListImpl()
+   at YesSql.Services.DefaultQuery.Query`1.ListImpl()
+   at OrchardCore.ContentManagement.DefaultContentManager.ImportAsync(IEnumerable`1 contentItems)
+   at OrchardCore.Recipes.Services.RecipeExecutor.<>c__DisplayClass7_0.<<ExecuteStepAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at OrchardCore.Environment.Shell.Scope.ShellScope.UsingAsync(Func`2 execute, Boolean activateShell)
+   at OrchardCore.Environment.Shell.Scope.ShellScope.UsingAsync(Func`2 execute, Boolean activateShell)
+   at OrchardCore.Environment.Shell.Scope.ShellScope.UsingAsync(Func`2 execute, Boolean activateShell)
+   at OrchardCore.Environment.Shell.Scope.ShellScope.UsingAsync(Func`2 execute, Boolean activateShell)
+   at OrchardCore.Recipes.Services.RecipeExecutor.ExecuteStepAsync(RecipeExecutionContext recipeStep)
+   at OrchardCore.Recipes.Services.RecipeExecutor.ExecuteAsync(String executionId, RecipeDescriptor recipeDescriptor, IDictionary`2 environment, CancellationToken cancellationToken)
+   at OrchardCore.Recipes.Services.RecipeExecutor.ExecuteAsync(String executionId, RecipeDescriptor recipeDescriptor, IDictionary`2 environment, CancellationToken cancellationToken)
+   at OrchardCore.Recipes.Services.RecipeExecutor.ExecuteAsync(String executionId, RecipeDescriptor recipeDescriptor, IDictionary`2 environment, CancellationToken cancellationToken)
+   at OrchardCore.Setup.Services.SetupService.SetupInternalAsync(SetupContext context)
+   at OrchardCore.Setup.Services.SetupService.SetupAsync(SetupContext context)
+   at OrchardCore.Setup.Services.SetupService.SetupAsync(SetupContext context)
+   at OrchardCore.Setup.Controllers.SetupController.IndexPOST(SetupViewModel model)
+   at lambda_method178(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at OrchardCore.Modules.ModularTenantRouterMiddleware.Invoke(HttpContext httpContext)
+   at OrchardCore.Modules.ModularTenantContainerMiddleware.<>c__DisplayClass4_0.<<Invoke>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at OrchardCore.Environment.Shell.Scope.ShellScope.UsingAsync(Func`2 execute, Boolean activateShell)
+   at OrchardCore.Environment.Shell.Scope.ShellScope.UsingAsync(Func`2 execute, Boolean activateShell)
+   at OrchardCore.Environment.Shell.Scope.ShellScope.UsingAsync(Func`2 execute, Boolean activateShell)
+   at OrchardCore.Environment.Shell.Scope.ShellScope.UsingAsync(Func`2 execute, Boolean activateShell)
+   at OrchardCore.Modules.ModularTenantContainerMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-12-11 23:10:13.4292||||Microsoft.Hosting.Lifetime|INFO|Application is shutting down... 
+2022-12-11 23:11:01.4077||||Microsoft.Hosting.Lifetime|INFO|Now listening on: https://localhost:5001 
+2022-12-11 23:11:01.4732||||Microsoft.Hosting.Lifetime|INFO|Now listening on: http://localhost:5000 
+2022-12-11 23:11:01.4790||||Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-12-11 23:11:01.4790||||Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2022-12-11 23:11:01.4790||||Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\User\src\CoffeCup.Web\ 
+2022-12-11 23:18:20.6810||||Microsoft.Hosting.Lifetime|INFO|Application is shutting down... 

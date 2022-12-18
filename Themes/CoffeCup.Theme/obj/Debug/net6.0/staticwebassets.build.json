@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "xJBLWeKa8rg6wntuate0arkyLrUeblRPrjGa7uaKfzk=",
+  "Source": "CoffeCup.Theme",
+  "BasePath": "_content/CoffeCup.Theme",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "CoffeCup.Theme\\wwwroot",
+      "Source": "CoffeCup.Theme",
+      "ContentRoot": "C:\\Users\\User\\src\\Themes\\CoffeCup.Theme\\wwwroot\\",
+      "BasePath": "_content/CoffeCup.Theme",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}

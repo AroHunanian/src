@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="@Orchard.CultureName()">
+<head>
+    <meta charset="utf-8" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style asp-src = "~/CoffeCup.Theme/site.css"></style>
+    <title>@RenderTitleSegments(Site.SiteName, "before")</title>
+   
+    <resources type="Meta" />
+    <resources type="HeadLink" />
+    <resources type="Stylesheet" />
+    <resources type="HeadScript" />
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" src="~/CoffeCup.Theme/images/image-removebg-preview.png">
+    <title>Coffee Shop</title>
+    <!-- bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- bootstrap links -->
+    <!-- fonts links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <!-- fonts links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    @await RenderSectionAsync("HeadMeta", required: false)
+</head>
+<body dir="@Orchard.CultureDir()">
+ <div class="all-content">
+<!-- navbar start -->
+<nav class="navbar navbar-expand-lg " id="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"  id="logo"><img src="~/CoffeCup.Theme/images/image-removebg-preview.png" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span ><i class="fa-solid fa-bars" style="color: white; font-size: 23px;"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Home">Home</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+            <li class="nav-item">
+            <a class="nav-link" href="menu">Menu</a>
+           <li class="nav-item">
+            <a class="nav-link" href="#about">Contact</a>
+            <li class="nav-item">
+            <a class="nav-link" href="blog">Blogs</a>
+          
+        
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <!-- navbar end -->
+<!-- Home section start -->
+<section id="home">
+    <div class="content">
+        <h3>Start Your Day Right</h3>
+        <p>The best coffe in Armenia
+            <br>Live, Love, Coffe
+        </p>
+        <button id = "btn">Order Now</button>
+    </div>
+</section>
+<!-- Home section end -->
+<!-- About Section start -->
+<section id="about">
+  <div class="container">
+    <div class="heading">About <span>Us</span></div>
+    <div class="row">
+      <div class="col-md-6">
+        <img src="~/CoffeCup.Theme/images/about.png" alt="">
+      </div>
+      <div class="col-md-6">
+        <h3>What Makes Our Coffe Special</h3>
+        <p>
+          
+Coffe Cup  offers a unique coffee house environment unlike any other in Armenia.
+ We are not only a place to drop in and get your morning cup of coffee (although you are more than welcome to do that),
+ <br><br>
+  we are a place where you can sit down and enjoy that tailor-made cup of coffee.
+   If you need to work, we have a seating area created specifically for you.
+   <br><br>
+    If you need to rest, we have a soft-seating area in front of a stone fire place that is perfect for your weary mind and body.
+     We offer a delicious variety of coffee from Safehouse Coffee made by our professionally trained baristas.
+     <br><br>
+      We have everything from classic coffee to our house made specialty beverages.
+      We look forward to serving you at Coffe Cup!
+        </p>
+        <button id="about-btn"> Learn more</button>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- About section end -->
+
+<!-- menu card start -->
+<section id="menu">
+  <div class="container">
+    <div class="heading3">Menu</div>
+  </div>
+  <div class="container" id="container2">
+  <div class="row">
+
+    <div class="col-md-3 py-3 py-md-0">
+      <div class="card">
+        <img src="~/CoffeCup.Theme/images/m1.png" alt="">
+          <div class="card-body">
+
+            <div class="star text-center">
+
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+               <i class="fa-regular fa-star"></i>
+               <i class="fa-regular fa-star"></i>
+               <i class="fa-regular fa-star"></i>
+
+            </div>
+            <h3>Coffe</h3>
+            <p>$99<strike> $100</strike> <span class="fa-solid fa-cart-shopping"></span></p>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="col-md-3 py-3 py-md-0">
+    <div class="card">
+      <img src="~/CoffeCup.Theme/images/m2.png" alt="">
+        <div class="card-body">
+
+          <div class="star text-center">
+
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+             <i class="fa-regular fa-star"></i>
+             <i class="fa-regular fa-star"></i>
+             <i class="fa-regular fa-star"></i>
+
+          </div>
+          <h3>Coffe</h3>
+          <p>$99<strike> $100</strike> <span class="fa-solid fa-cart-shopping"></span></p>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-3 py-3 py-md-0">
+  <div class="card">
+    <img src="~/CoffeCup.Theme/images/m3.png" alt="">
+      <div class="card-body">
+
+        <div class="star text-center">
+
+          <i class="fa-regular fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+           <i class="fa-regular fa-star"></i>
+           <i class="fa-regular fa-star"></i>
+           <i class="fa-regular fa-star"></i>
+
+        </div>
+        <h3>Coffe</h3>
+        <p>$99<strike> $100</strike> <span class="fa-solid fa-cart-shopping"></span></p>
+  </div>
+</div>
+</div>
+
+<div class="col-md-3 py-3 py-md-0">
+  <div class="card">
+    <img src="~/CoffeCup.Theme/images/m4.png" alt="">
+      <div class="card-body">
+
+        <div class="star text-center">
+
+          <i class="fa-regular fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+           <i class="fa-regular fa-star"></i>
+           <i class="fa-regular fa-star"></i>
+           <i class="fa-regular fa-star"></i>
+
+        </div>
+        <h3>Coffe</h3>
+        <p>$99<strike> $100</strike> <span class="fa-solid fa-cart-shopping"></span></p>
+  </div>
+</div>
+</div>
+
+</div>
+<div class="row" style="margin-top: 30px;">
+
+  <div class="col-md-3 py-3 py-md-0">
+    <div class="card">
+      <img src="~/CoffeCup.Theme/images/m5.png" alt="">
+        <div class="card-body">
+
+          <div class="star text-center">
+
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+             <i class="fa-regular fa-star"></i>
+             <i class="fa-regular fa-star"></i>
+             <i class="fa-regular fa-star"></i>
+
+          </div>
+          <h3>Coffe</h3>
+          <p>$99<strike> $100</strike> <span class="fa-solid fa-cart-shopping"></span></p>
+    </div>
+  </div>
+</div>
+
+
+<div class="col-md-3 py-3 py-md-0">
+  <div class="card">
+    <img src="~/CoffeCup.Theme/images/m6.png" alt="">
+      <div class="card-body">
+
+        <div class="star text-center">
+
+          <i class="fa-regular fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+           <i class="fa-regular fa-star"></i>
+           <i class="fa-regular fa-star"></i>
+           <i class="fa-regular fa-star"></i>
+
+        </div>
+        <h3>Coffe</h3>
+        <p>$99<strike> $100</strike> <span class="fa-solid fa-cart-shopping"></span></p>
+  </div>
+</div>
+</div>
+
+<div class="col-md-3 py-3 py-md-0">
+<div class="card">
+  <img src="~/CoffeCup.Theme/images/m7.png" alt="">
+    <div class="card-body">
+
+      <div class="star text-center">
+
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+         <i class="fa-regular fa-star"></i>
+         <i class="fa-regular fa-star"></i>
+         <i class="fa-regular fa-star"></i>
+
+      </div>
+      <h3>Coffe</h3>
+      <p>$99<strike> $100</strike> <span class="fa-solid fa-cart-shopping"></span></p>
+</div>
+</div>
+</div>
+
+<div class="col-md-3 py-3 py-md-0">
+<div class="card">
+  <img src="~/CoffeCup.Theme/images/m8.png" alt="">
+    <div class="card-body">
+
+      <div class="star text-center">
+
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+         <i class="fa-regular fa-star"></i>
+         <i class="fa-regular fa-star"></i>
+         <i class="fa-regular fa-star"></i>
+
+      </div>
+      <h3>Coffe</h3>
+      <p>$99<strike> $100</strike> <span class="fa-solid fa-cart-shopping"></span></p>
+</div>
+</div>
+</div>
+
+</div>
+  </div>
+</section>
+<!-- menu card end -->
+<!-- contact start -->
+<section id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <div class="heading4">Contact <span>Us</span></div>
+        <p>
+         Filling this form you will help us to get close to you
+          <br>and suggest your favorite Coffe
+        </p>
+        <input type="text" class = "form-control" placeholder="Name"aria-label="default input example">
+        <input type="email" class = "form-control" placeholder="Email"aria-label="default input example">
+        <input type="number" class = "form-control" placeholder="PHone"aria-label="default input example">
+        <button id="contact-btn">Send Message</button>
+      </div>
+      <div class="col-md-5" id="col">
+        <h1>Info</h1>
+        <p><i class="fa-regular fa-envelope"></i>CoffeCup@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i>+37498706011</p>
+        <p><i class="fa-solid fa-building-columns"></i>CoffeCup.com</p>
+        <p>We always stand for you to give your dream Coffee</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- contact end -->
+
+
+        <!-- blogs start -->
+        <section id="blogs">
+          <div class="heading7">Latest <span>Blogs</span></div>
+          <div class="container">
+
+            <div class="row">
+
+              <div class="col-md-4 py-3 py-md-0">
+
+                <div class="card">
+                  <img src="~/CoffeCup.Theme/images/b1.png" alt="">
+                  <div class="card-body">
+                    <h3>Lorem, ipsum dolor.</h3>
+                    <h5>Admin / 6 March 2020</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ipsam sed quod, hic unde tempore cum! Qui necessitatibus ipsum nemo!</p>
+                    <button id="blog-btn">Read More.</button>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-md-4 py-3 py-md-0">
+
+                <div class="card">
+                  <img src="~/CoffeCup.Theme/images/b2.png" alt="">
+                  <div class="card-body">
+                    <h3>Lorem, ipsum dolor.</h3>
+                    <h5>Admin / 6 March 2020</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ipsam sed quod, hic unde tempore cum! Qui necessitatibus ipsum nemo!</p>
+                    <button id="blog-btn">Read More.</button>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-md-4 py-3 py-md-0">
+
+                <div class="card">
+                  <img  src="~/CoffeCup.Theme/images/b3.png" alt="">
+                  <div class="card-body">
+                    <h3>Lorem, ipsum dolor.</h3>
+                    <h5>Admin / 6 March 2020</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ipsam sed quod, hic unde tempore cum! Qui necessitatibus ipsum nemo!</p>
+                    <button id="blog-btn">Read More.</button>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+        </section>
+        <!-- blogs end -->
+
+
+
+
+
+
+
+
+        <!-- footer start -->
+        <footer id="footer">
+          <div class="footer-logo text-center"><img  src ="~/CoffeCup.Theme/images/image-removebg-preview.png" alt=""></div>
+          <div class="socail-links text-center">
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-pinterest-p"></i>
+          </div>
+
+          <div class="credits text-center">
+            Dseigned By <a href="#"> <span>Aro Hunanian</span></a>
+          </div>
+
+          <div class="copyright text-center">
+            &copy; Copyright <strong> <span>Coffee Cup</span></strong>. All Rights reserved
+          </div>
+  
+
+        </footer>
+        <!-- footer end -->
+
+
+
+
+        <a href="#" class="arrow"><i><img  src="~/CoffeCup.Theme/images/up-arrow.png" alt="" width="50px"></i></a>
+
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

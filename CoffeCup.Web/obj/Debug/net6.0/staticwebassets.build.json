@@ -1,0 +1,67 @@
+{
+  "Version": 1,
+  "Hash": "5DheOYCrwOLVBIPUlyOPqkPX2gZfF408pUGFhSAOsEk=",
+  "Source": "CoffeCup.Web",
+  "BasePath": "_content/CoffeCup.Web",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\User\\src\\Modules\\CoffeCup.Core\\CoffeCup.Core.csproj",
+      "Version": 2,
+      "Source": "CoffeCup.Core",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+    },
+    {
+      "Identity": "C:\\Users\\User\\src\\Themes\\CoffeCup.Theme\\CoffeCup.Theme.csproj",
+      "Version": 2,
+      "Source": "CoffeCup.Theme",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+    }
+  ],
+  "DiscoveryPatterns": [
+    {
+      "Name": "CoffeCup.Theme\\wwwroot",
+      "Source": "CoffeCup.Theme",
+      "ContentRoot": "C:\\Users\\User\\src\\Themes\\CoffeCup.Theme\\wwwroot\\",
+      "BasePath": "_content/CoffeCup.Theme",
+      "Pattern": "**"
+    },
+    {
+      "Name": "CoffeCup.Web\\wwwroot",
+      "Source": "CoffeCup.Web",
+      "ContentRoot": "C:\\Users\\User\\src\\CoffeCup.Web\\wwwroot\\",
+      "BasePath": "_content/CoffeCup.Web",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\User\\src\\CoffeCup.Web\\wwwroot\\.placeholder",
+      "SourceId": "CoffeCup.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\src\\CoffeCup.Web\\wwwroot\\",
+      "BasePath": "_content/CoffeCup.Web",
+      "RelativePath": ".placeholder",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\.placeholder"
+    }
+  ]
+}
