@@ -11,7 +11,7 @@ using System;
 using System.Reflection;
 
 [assembly: OrchardCore.Modules.Manifest.ModuleMarkerAttribute("CoffeCup.Core", "Module")]
-[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\CoffeCup.Core\\Views\\Home\\Index.cshtml|C:\\Users\\User\\src\\Modules\\CoffeCup.Co" +
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\CoffeCup.Core\\Views\\Home\\Index.cshtml|c:\\Users\\User\\src\\Modules\\CoffeCup.Co" +
     "re\\Views\\Home\\Index.cshtml")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("CoffeCup.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
